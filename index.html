@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alper Emin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="website icon" type="icon" href="Logo.fw3.fw.ico">
+</head>
+<body>
+  <div class="header">
+    <div class="navbar" id="myNavbar">
+      <div>
+        <div class="logo">
+          <h1>Alper Emin</h1>
+        </div>
+        <a href="#anasayfa">Anasayfa</a>
+        <a href="#hakkımda">Hakkımda</a>
+        <div class="dropdown">
+          <button class="dropbtn">Eğlence
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#Galeri">Galeri</a>
+            <a href="#Playlist">Müzik</a>
+          </div>
+        </div>
+        <div class="bars">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <section id="anasayfa" class="hero">
+    <div class="container">
+        <h2>Alper Emin</h2>
+        <p>Benim adım Alper yazılımcıyım <br> <br></p>
+        <a href="#hakkımda" class="btn">Hemen Keşfet</a>
+    </div>
+</section>
+
+<section id="hakkımda" class="features">
+    <div class="container">
+        <div class="feature">
+            <h3>Hakkımda</h3>
+            <p>Hızlı, etkili ve kolay tasarımlar yaparak kendimi geliştiriyorum. <br><br><br>
+            Göz alıcı görsel tasarımlar ile kendimi geliştiriyor ve kendi kendimi bu alanda geliştiriyorum. <br> <br><br>
+          Mobil uyumlu ve interaktif siteler ile kullanıcıların eğlenebildiği projeler yapmaya çalışıyorum.</p>
+        </div>
+        <div id="Galeri" class="feature">
+          <h3>Bazı Projelerim</h3>
+          <div class="gallery-container">
+            <div class="gallery">
+                <div class="image">
+                    <img src="web1.png" alt="Resim 1">
+                </div>
+                <div class="image">
+                    <img src="web2.png" alt="Resim 2">
+                </div>
+                <div class="image">
+                    <img src="web3.png" alt="Resim 3">
+                </div>
+                <div class="image">
+                  <img src="web4.png" alt="Resim 4">
+              </div>
+              <div class="image">
+                <img src="web5.png" alt="Resim 5">
+            </div>
+                <!-- Daha fazla resim ekleyebilirsiniz -->
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <section id="Playlist">
+          <h1><br><br><br></h1>
+          <div class="playlist-container">
+            <h2>Müzik Çalma Listesi</h2>
+            <div class="playlist">
+                <div class="song">
+                    <img src="song.jpg" alt="Song 1">
+                    <div class="overlay">
+                        <h3 class="title">Hey Brother</h3>
+                        <audio src="song1.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div>
+                <div class="song">
+                    <img src="song.jpg" alt="Song 2">
+                    <div class="overlay">
+                        <h3 class="title">Centuries</h3>
+                        <audio src="song2.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div>
+                <div class="song">
+                    <img src="song.jpg" alt="Song 3">
+                    <div class="overlay">
+                        <h3 class="title">Bleend out</h3>
+                        <audio src="song7.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div>
+                <div class="song">
+                    <img src="song.jpg" alt="Song 3">
+                    <div class="overlay">
+                        <h3 class="title">Dancin</h3>
+                        <audio src="song3.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div>
+                <div class="song">
+                    <img src="song.jpg" alt="Song 3">
+                    <div class="overlay">
+                        <h3 class="title">The Spectre</h3>
+                        <audio src="song4.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div>
+                <div class="song">
+                    <img src="song.jpg" alt="Song 3">
+                    <div class="overlay">
+                        <h3 class="title">Real Gone</h3>
+                        <audio src="song5.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div> 
+                <div class="song">
+                    <img src="song.jpg" alt="Song 3">
+                    <div class="overlay">
+                        <h3 class="title">Hunter love</h3>
+                        <audio src="song6.mp3" class="audioPlayer"></audio>
+                    </div>
+                </div>
+                <div class="song">
+                  <img src="song.jpg" alt="Song 3">
+                  <div class="overlay">
+                      <h3 class="title">Rampampam</h3>
+                      <audio src="song8.mp3" class="audioPlayer"></audio>
+                  </div>
+              </div>
+              <div class="song">
+                <img src="song.jpg" alt="Song 3">
+                <div class="overlay">
+                    <h3 class="title">Physical</h3>
+                    <audio src="song9.mp3" class="audioPlayer"></audio>
+                </div>
+            </div>
+                <!--Çalma listesi ekleme yeri-->
+            </div>
+        </div>
+          <p><br></p>
+    </section>
+  <footer>
+      <div class="container">
+          <p>Alper Emin <br></p>
+          <a href="https://www.instagram.com/alpereminaktay/"><i class="fa-brands fa-instagram">   Instagram</i></a>
+      </div>
+  </footer>
+</body>
+</html>

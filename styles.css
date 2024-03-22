@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: rgba(228, 228, 229, 1);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #121212;
+}
+/*--------------------Navbar start-------*/
+.navbar {
+  overflow: hidden;
+  background-color: #282c34;
+  padding: 5px 20%;
+}
+
+.logo{
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 5px 0px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.8s;
+}
+
+.navbar a:hover {
+  background-color: #3ca8a3;
+  color: white;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;    
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.navbar a, .dropdown .dropbtn {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #353535;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #3ca8a3;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.bars{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .bars{
+    display: inline;
+    font-size: 20px;
+  }
+
+  .navbar a, .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+/*---------------------Navbar finish ----------*/
+
+.container {    /*----Genel container-----*/
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/*---------------------------Anasayfa--------------*/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(sean-oulashin-KMn4VEeEPR8-unsplash.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/*----------------------Secitons-------------*/
+.features {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature h3 {
+  margin-bottom: 14px;
+}
+
+/*-----------------------------Galeri---------------*/
+.gallery-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.gallery {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.image {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.image img {
+  width: 300px; /* Resimlerin genişliği */
+  height: auto;
+  display: block;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  overflow: auto;
+}
+
+.modal {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.gallery-container::-webkit-scrollbar {
+  width: 8px; /* Scrollbar genişliği */
+  height: 8px; /* Scrollbar yüksekliği */
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.623); /* Scrollbar rengi */
+  border-radius: 4px; /* Yuvarlatılmış kenarlar */
+}
+
+.gallery-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Scrollbar arka plan rengi */
+}
+
+/*-------------------Playlist--------*/
+
+
+.playlist-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 20px; /* Alt kısıma kaydırma çubuğu yüksekliği kadar boşluk ekleyelim */
+  border-radius: 10px; /* Yuvarlatılmış kenarlar */
+  background-color: rgba(0, 0, 0, 0.1); /* Arkaplan rengi */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  padding-bottom: 20px; 
+}
+
+.playlist {
+  display: inline-flex;
+  gap: 20px;
+  padding-bottom: 20px; /* Kaydırma çubuğu yüksekliği kadar alt boşluk */
+}
+
+/* Kaydırma çubuğu stilleri */
+.playlist-container::-webkit-scrollbar {
+  width: 8px; /* Scrollbar genişliği */
+  height: 8px; /* Scrollbar yüksekliği */
+}
+
+.playlist-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.623); /* Scrollbar rengi */
+  border-radius: 4px; /* Yuvarlatılmış kenarlar */
+}
+
+.playlist-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Scrollbar arka plan rengi */
+}
+
+.song {
+  position: relative;
+  width: 200px; /* Öğe genişliği */
+  overflow: hidden;
+  border-radius: 10px; /* Yuvarlatılmış kenarlar */
+  overflow: hidden; /* Scrollbar'ları gizle */
+}
+
+.song img {
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+}
+
+.song:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10%;
+  background-color: rgba(0, 0, 0, 0.336);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.song:hover .overlay {
+  opacity: 1;
+}
+
+.overlay.playing {
+  opacity: 1;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.audioPlayer {
+  display: none;
+}
+
+
+/*------------------Playlist finish-----*/
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a{
+  background-color: #14141400;
+  color: #ffffffc2;
+  text-align: center;
+  padding: 0px 0;
+}
